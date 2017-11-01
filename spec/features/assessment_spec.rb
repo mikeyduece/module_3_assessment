@@ -2,19 +2,21 @@ require 'rails_helper'
 
 feature 'User' do
   scenario 'sees stores within 25 miles' do
-    visit '/'
+    VCR.use_cassette('actual_store_index') do
+      visit '/'
 
-    fill_in 'q', with: '80202'
-    click_on('Locate')
+      fill_in 'q', with: '80202'
+      click_on('Locate')
 
-    expect(current_path).to eq('/search')
-    expect(page).to have_content('17 Total Stores')
-    within('.store') do
-      expect(page).to have_content('.city')
-      expect(page).to have_content('.name')
-      expect(page).to have_content('.distance')
-      expect(page).to have_content('.phone')
-      expect(page).to have_content('.type')
+      expect(current_path).to eq('/search')
+      expect(page).to have_content('17 Total Stores')
+      within('.store') do
+        expect(page).to have_content('.city')
+        expect(page).to have_content('.name')
+        expect(page).to have_content('.distance')
+        expect(page).to have_content('.phone')
+        expect(page).to have_content('.type')
+      end
     end
   end
 end
