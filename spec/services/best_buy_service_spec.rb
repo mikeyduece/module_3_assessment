@@ -8,7 +8,7 @@ describe 'Best Buy Service' do
           zip = '80202'
           service = BestBuyService.filter_by_zip(zip)
 
-          expect(service). to be_a BestBuyService
+          expect(service.first). to be_a BestBuyService
         end
       end
     end
