@@ -11,11 +11,13 @@ module Api
       end
 
       def create
-        render json: Item.create(item_params)
+        item = Item.find(params[:id])
+        render json: item.create(item_params)
       end
 
       def update
-        render json: Item.update(item_params)
+        item = Item.find(params[:id])
+        render json: item.update(item_params)
       end
 
       def destroy
