@@ -5,6 +5,7 @@ feature 'User' do
     visit '/'
 
     fill_in 'q', with: '80202'
+    click_on('Locate')
 
     expect(current_path).to eq('/search')
     expect(page).to have_content('17 Total Stores')
