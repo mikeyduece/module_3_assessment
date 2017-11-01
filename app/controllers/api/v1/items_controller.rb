@@ -11,8 +11,7 @@ module Api
       end
 
       def create
-        item = Item.find(params[:id])
-        render json: item.create(item_params)
+        render json: Item.create(item_params)
       end
 
       def update
