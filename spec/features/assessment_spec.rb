@@ -6,8 +6,15 @@ feature 'User' do
 
     fill_in 'q', with: '80202'
 
-    expect(current_path).to be('/search')
-    epect(page).to have_content('17 Total Stores')
+    expect(current_path).to eq('/search')
+    expect(page).to have_content('17 Total Stores')
+    within('.store') do
+      expect(page).to have_content('.city')
+      expect(page).to have_content('.name')
+      expect(page).to have_content('.distance')
+      expect(page).to have_content('.phone')
+      expect(page).to have_content('.type')
+    end
   end
 end
 
