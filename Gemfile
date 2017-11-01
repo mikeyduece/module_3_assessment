@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'faraday'
 gem 'figaro'
 gem "minitest-rails"
+gem 'rails-api'
 
 group :development do
   gem "spring"
