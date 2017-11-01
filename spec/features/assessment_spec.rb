@@ -10,12 +10,11 @@ feature 'User' do
 
       expect(current_path).to eq('/search')
       expect(page).to have_content('17 Total Stores')
-      within('.store') do
-        expect(page).to have_content('.city')
-        expect(page).to have_content('.name')
-        expect(page).to have_content('.distance')
-        expect(page).to have_content('.phone')
-        expect(page).to have_content('.type')
+      within('.store', match: :first) do
+        expect(page).to have_css('.city')
+        expect(page).to have_css('.distance')
+        expect(page).to have_css('.phone')
+        expect(page).to have_css('.type')
       end
     end
   end

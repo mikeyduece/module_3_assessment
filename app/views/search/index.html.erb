@@ -1,8 +1,10 @@
+<h3><%= @stores.count %> Total Stores</h3>
+
 <% @stores.each do |store| %>
-  <% require 'pry'; binding.pry %>
-  <li class='name'><%= store.name %></li>
-  <li class='distance'><%= store.distance %></li>
-  <li class='phone'><%= store.phone %></li>
-  <li class='city'><%= store.city %></li>
-  <li class='type'><%= store.type %></li>
+  <ul class='store'><%= store.name %>
+    <li class='distance'><%= store.distance %></li>
+    <li class='phone'><%= store.phone %></li>
+    <li class='city'><%= store.city %></li>
+    <li class='type'><%= store.type %></li>
+  </ul>
 <% end %>

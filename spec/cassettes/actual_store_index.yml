@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=hhp47b5bvjda7pj44gsauf78&format=json&show=storeType,longName,city,distance,phone
+    uri: https://api.bestbuy.com/v1/stores(area(80202,25))?apiKey=hhp47b5bvjda7pj44gsauf78&format=json&pageSize=17&show=storeType,longName,city,distance,phone
     body:
       encoding: US-ASCII
       string: ''
@@ -29,18 +29,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=UTF-8
       Date:
-      - Wed, 01 Nov 2017 16:32:05 GMT
+      - Wed, 01 Nov 2017 16:38:31 GMT
       Server:
       - Best Buy Public APIs
       X-Cache-Hit:
-      - 'true'
+      - 'false'
       Content-Length:
-      - '1396'
+      - '2172'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"from":1,"to":10,"currentPage":1,"total":17,"totalPages":2,"queryTime":"0.008","totalTime":"0.019","partial":false,"canonicalUrl":"/v1/stores(area(\"80202\",25))?show=storeType,longName,city,distance,phone&format=json&apiKey=hhp47b5bvjda7pj44gsauf78","stores":[{"storeType":"Mobile
+      string: '{"from":1,"to":17,"currentPage":1,"total":17,"totalPages":1,"queryTime":"0.016","totalTime":"0.034","partial":false,"canonicalUrl":"/v1/stores(area(\"80202\",25))?show=storeType,longName,city,distance,phone&pageSize=17&format=json&apiKey=hhp47b5bvjda7pj44gsauf78","stores":[{"storeType":"Mobile
         SAS","longName":"Cherry Creek Shopping Center","city":"Denver","distance":3.45,"phone":"303-270-9189"},{"storeType":"Big
         Box","longName":"Belmar","city":"Lakewood","distance":5.31,"phone":"303-742-8039"},{"storeType":"Big
         Box","longName":"Colorado Blvd","city":"Denver","distance":5.59,"phone":"303-758-5805"},{"storeType":"Big
@@ -50,8 +50,15 @@ http_interactions:
         SAS","longName":"Town Center at Aurora","city":"Aurora","distance":9.73,"phone":"303-326-0848"},{"storeType":"Big
         Box","longName":"Aurora","city":"Aurora","distance":9.79,"phone":"303-338-5797"},{"storeType":"Big
         Box","longName":"Littleton","city":"Lakewood","distance":10.44,"phone":"303-932-7830"},{"storeType":"Big
-        Box","longName":"Southglenn","city":"Centennial","distance":11.02,"phone":"303-797-3246"}],"warnings":"Distances
+        Box","longName":"Southglenn","city":"Centennial","distance":11.02,"phone":"303-797-3246"},{"storeType":"Big
+        Box","longName":"I70 & Tower Rd","city":"Aurora","distance":11.65,"phone":"303-373-9284"},{"storeType":"Mobile
+        SAS","longName":"Flatiron Crossing Mall","city":"Broomfield","distance":14.43,"phone":"303-466-8624"},{"storeType":"Big
+        Box","longName":"S.E. Denver","city":"Lone Tree","distance":14.95,"phone":"303-649-9474"},{"storeType":"Warehouse
+        Sale","longName":"DENVER SALE EVENT","city":"Aurora","distance":15.34,"phone":"303-340-4971"},{"storeType":"Big
+        Box","longName":"S.E. Aurora","city":"Aurora","distance":18.20,"phone":"303-693-0166"},{"storeType":"Big
+        Box","longName":"Parker","city":"Parker","distance":20.82,"phone":"303-840-5501"},{"storeType":"Big
+        Box","longName":"Boulder","city":"Boulder","distance":22.79,"phone":"303-938-2889"}],"warnings":"Distances
         are in terms of miles (default)"}'
     http_version: 
-  recorded_at: Wed, 01 Nov 2017 16:29:59 GMT
+  recorded_at: Wed, 01 Nov 2017 16:38:13 GMT
 recorded_with: VCR 3.0.3
