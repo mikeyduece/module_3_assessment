@@ -12,7 +12,7 @@ class Store
 
   def self.filter_by_zip(zip)
     stores = BestBuyService.filter_by_zip(zip)
-    stores.map do |store|
+    stores[:stores].map do |store|
       Store.new(store)
     end
   end

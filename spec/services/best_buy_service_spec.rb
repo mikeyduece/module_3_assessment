@@ -6,9 +6,9 @@ describe 'Best Buy Service' do
       it 'returns a valid object' do
         VCR.use_cassette('service_test') do
           zip = '80202'
-          service = BestBuyService.filter_by_zip(zip)
+          service = BestBuyService.new
 
-          expect(service.first). to be_a BestBuyService
+          expect(service). to be_a BestBuyService
         end
       end
     end
