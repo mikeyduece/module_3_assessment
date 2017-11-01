@@ -1,4 +1,5 @@
 <% @stores.each do |store| %>
+  <% require 'pry'; binding.pry %>
   <li class='name'><%= store.name %></li>
   <li class='distance'><%= store.distance %></li>
   <li class='phone'><%= store.phone %></li>

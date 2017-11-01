@@ -1,11 +1,13 @@
 class Store
 
+  attr_reader :name, :distance, :city, :phone, :type
+
   def initialize(attr)
-    @name = attr[:name]
+    @name = attr[:longName]
     @distance = attr[:distance]
     @city = attr[:city]
     @phone = attr[:phone]
-    @type = attr[:type]
+    @type = attr[:storeType]
   end
 
   def self.filter_by_zip(zip)
