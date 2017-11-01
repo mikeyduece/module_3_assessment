@@ -1,6 +1,6 @@
 module Api
   module V1
-    class ItemsController < ApplicationController
+    class ItemsController < Api::V1::ApplicationController
 
       def index
         render json: Item.all
@@ -21,6 +21,12 @@ module Api
       def destroy
         item = Item.find(params[:id])
         render json: item.destroy
+      end
+
+      private
+
+      def item_params
+        params.require(:item).permit(:name, :description, :image_url)
       end
     end
   end
